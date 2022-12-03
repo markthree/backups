@@ -20,30 +20,46 @@
 
 ### 运行
 
-#### 监听
+1. 监听
 
 ```shell
 deno task start:watch {目标目录} {备份目录}
 ```
 
-#### 同步
+2. 同步
 
 ```shell
 deno task start:sync {目标目录} {备份目录}
 ```
 
+3. 静态同步
+
+> 静态的同步，用于编译后给 windows 的每日计划任务，路径前往 [static-sync.ts](./static-sync.ts) 修改
+
+```shell
+deno task start:static-sync
+```
+
+<br />
+
 ### 编译
 
-#### 监听
+1. 监听
 
 ```shell
 deno task compile:watch
 ```
 
-#### 同步
+2. 同步
 
 ```shell
 deno task compile:sync
+```
+
+3. 静态同步
+
+```shell
+deno task compile:static-sync
 ```
 
 <br />

@@ -2,7 +2,9 @@
     "tasks": {
         "start:watch": "deno run -A watch.ts",
         "start:sync": "deno run -A sync.ts",
+        "start:static-sync": "deno run -A static-sync.ts",
         "compile:watch": "deno compile -A watch.ts",
-        "compile:sync": "deno compile -A sync.ts"
+        "compile:sync": "deno compile -A sync.ts",
+        "compile:static-sync": "deno compile -A sync.ts"
     }
 }
