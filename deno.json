@@ -1,10 +1,10 @@
 {
     "tasks": {
-        "start:watch": "deno run -A watch.ts",
-        "start:sync": "deno run -A sync.ts",
-        "start:static-sync": "deno run -A static-sync.ts",
-        "compile:watch": "deno compile -A watch.ts",
-        "compile:sync": "deno compile -A sync.ts",
-        "compile:static-sync": "deno compile -A sync.ts"
+        "start:watch": "deno run -A src/watch.ts",
+        "start:sync": "deno run -A src/sync.ts",
+        "start:static-sync": "deno run -A src/static-sync.ts",
+        "compile:watch": "deno compile -A src/watch.ts",
+        "compile:sync": "deno compile -A src/sync.ts",
+        "compile:static-sync": "deno compile -A src/sync.ts"
     }
 }
