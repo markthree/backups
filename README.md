@@ -20,14 +20,30 @@
 
 ### 运行
 
+#### 监听
+
 ```shell
-deno task start {目标目录} {备份目录}
+deno task start:watch {目标目录} {备份目录}
+```
+
+#### 同步
+
+```shell
+deno task start:sync {目标目录} {备份目录}
 ```
 
 ### 编译
 
+#### 监听
+
 ```shell
-deno task compile
+deno task compile:watch
+```
+
+#### 同步
+
+```shell
+deno task compile:sync
 ```
 
 <br />
@@ -36,8 +52,10 @@ deno task compile
 
 #### Windows
 
+##### 监听
+
 ```shell
-start /B deno task start {目标目录} {备份目录}
+start /B deno task start:watch {目标目录} {备份目录}
 ```
 
 <br />

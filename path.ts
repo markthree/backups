@@ -1,5 +1,4 @@
 import {
-  basename,
   isAbsolute,
   join,
   normalize,
@@ -15,21 +14,11 @@ function normalizePath(path: string) {
 }
 
 if (Deno.args.length !== 2) {
-  throw new Error("源和输出是必需的");
+  throw new Error("目标目录和备份目录是必需的");
 }
 
 const paths = Deno.args.map((p) => normalizePath(p));
 
 await Promise.all(paths.map((p) => ensureDir(p)));
 
-const [src, dest] = paths;
-
-const watcher = Deno.watchFs(src);
-
-for await (const event of watcher) {
-  if (event.kind === "create") {
-    event.paths.forEach((path) => {
-      Deno.link(path, join(dest, basename(path)));
-    });
-  }
-}
+export const [src, dest] = paths;
