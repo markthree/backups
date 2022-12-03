@@ -3,9 +3,8 @@ import { ensureLink, walk } from "https://deno.land/std@0.167.0/fs/mod.ts";
 import { basename, join } from "https://deno.land/std@0.167.0/path/mod.ts";
 
 for await (const entry of walk(src)) {
-  const { path } = entry;
-  const ignore = path === src;
-  if (!ignore) {
+  const { path, isFile } = entry;
+  if (isFile) {
     try {
       await ensureLink(path, join(dest, basename(path)));
     } catch {

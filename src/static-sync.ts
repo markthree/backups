@@ -8,9 +8,8 @@ const src = "D:/Data/important"; // 目标目录
 const dest = "D:/Backups"; // 备份目录
 
 for await (const entry of walk(src)) {
-  const { path } = entry;
-  const ignore = path === src;
-  if (!ignore) {
+  const { path, isFile } = entry;
+  if (isFile) {
     try {
       await ensureLink(path, join(dest, basename(path)));
     } catch {
