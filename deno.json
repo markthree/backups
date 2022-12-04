@@ -5,6 +5,6 @@
         "start:static-sync": "deno run -A src/static-sync.ts",
         "compile:watch": "deno compile -A src/watch.ts",
         "compile:sync": "deno compile -A src/sync.ts",
-        "compile:static-sync": "deno compile -A src/sync.ts"
+        "compile:static-sync": "deno compile -A src/static-sync.ts"
     }
 }
