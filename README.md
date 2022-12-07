@@ -1,6 +1,6 @@
-# backups
+# deno-backups
 
-硬链接备份
+由 `Deno` 实现的硬链接备份
 
 <br />
 
